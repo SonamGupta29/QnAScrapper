@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scrapper for the e-commerce sites by buggynap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Scrapper for the e-commerce sites</h1>
+      <h2 class="project-tagline">Web scrapper for fetching data from the e-commerce sites</h2>
+      <a href="https://github.com/buggynap/QnAScrapper" class="btn">View on GitHub</a>
+      <a href="https://github.com/buggynap/QnAScrapper/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/buggynap/QnAScrapper/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="question-answering-system-for-ecommerce-sites" class="anchor" href="#question-answering-system-for-ecommerce-sites" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Question Answering System for e­commerce sites</h1> 
+ 
+
+<h3>
+<a id="abstract-" class="anchor" href="#abstract-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract </h3>
+
+<hr>
+
+<p>These days most of the shopping is online with the growth of e­commerce. In this 
+scenario, a customer or a user would want to know about a particular product before buying it . 
+A customer service provider answers questions posed by users going through the product, 
+pricing and personal information of which they have access to. So, our project is to build a 
+question answering system that would answer products­related questions of the users. Through 
+this project we would like to automate the task performed by customer service providers. 
+</p>
+ 
+
+<h3>
+<a id="project-scope" class="anchor" href="#project-scope" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Scope</h3>
+
+<hr>
+
+<p>On a broad level the project aims to take a sentence as an input and extracts the aspect 
+term form it, and tries to use a simple pattern matching algorithm to retrieve the relevant 
+answers from the accessible data.
+The Scope can be divided into the following levels:  
+1. Data representation using appropriate data structures. 
+2. Aspect Term detection in the query. 
+3. Identify the right fields in the constructed data structure of the available data. 
+4. Generate a sentence asking the customer to provide the required  information, if 
+anything is missing. 
+5. keeping track of the information in previous question, so that the context doesn't get lost. 
+6. Classification of queries into bins based on the type of response like descriptive, yes/no 
+question, etc. 
+7. Ranking the relevant responses.
+</p>
+ 
+
+<h3>
+<a id="proposed-approach--" class="anchor" href="#proposed-approach--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proposed Approach : </h3>
+
+<hr>
+
+<p>● Removing stop words: Stop words are the words which appear frequently in the query but provide less meaning in
+  identifying the important content of the document such as ‘a’, ‘an’, ‘the’,  etc. </p>
+
+<p>● Stemming: Word stemming is the process of removing prefixes and suffixes of each word.  </p>
+
+<p>● We then identify the tokens which define many of the possible domain questions and answerable token keywords 
+  which enable our system to search questions more efficiently. (​ Aspect term extraction​ ) </p>
+
+<p>● The system will search for the term that is found in Step 3 and its associative word found in Step 2. If the 
+  user asks the question: “What is the warranty period for a Videocon TV model: VIDCN 12345”. Then the system 
+  will search for the domain ‘TV’, then sub­domain: ‘Videocon’ And then for model number that is in the user 
+  query. 
+     1. If the user’s question is incomplete, then our system will prompt for the missing information. 
+     2. System will auto generate questions depending on the previous questions. If the user asks for television 
+        and warranty period’ in the previous queries then our system will ask further questions like ’warranty<br>
+        period range’ or ‘would you interested in screen size’, etc.  </p>
+
+<h3>
+<a id="toolstechnologies-to-be-used--" class="anchor" href="#toolstechnologies-to-be-used--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tools/Technologies to be used : </h3>
+
+<hr>
+
+<ol>
+<li>Scrapy ­ For crawling and collecting data.<br>
+</li>
+<li>Stanford’s Aspect Term Tool ­ For extracting the aspect term from the query.</li>
+<li>Stanford NLP  Parser &amp; POS­Tagger </li>
+<li>Natural Language Toolkit (NLTK) </li>
+<li>Python</li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/buggynap/QnAScrapper">Scrapper for the e-commerce sites</a> is maintained by <a href="https://github.com/buggynap">buggynap</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
