@@ -12,4 +12,4 @@ class qnaItem(Item):
     # name = scrapy.Field()
     productName = Field()
     productPrice = Field()
-    link = Field()
+    links = Field()
